@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Masuk</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+      <form method="POST" class="login-form">
+        <span>
+          <h1>Sistem Informasi Penilaian Raport Siswa</h1>
+          <hr>
+        </span>
+        <!-- onclick="window.location.href=admin" -->
+        <!-- onclick="window.location.href=siswa" -->
+        <div class="select">
+          <span>
+            <select name="slt-1" id="slt-1" required="required">
+              <option>Pilih Salah Satu</option>
+              <option value="1">Admin</option>
+              <option value="2">Guru</option>
+              <option value="3">Siswa</option>
+            </select>
+          </span>
+        </div>
+
+        <div class="txtb">
+          <input type="text" name="username" id="usr">
+          <span data-placeholder="Nama Pengguna"></span>
+        </div>
+
+        <div class="txtb">
+          <input type="password" name="password" id="pwd">
+          <span data-placeholder="Kata Sandi"></span>
+        </div>
+
+        <input type="button" class="logbtn" id="opt-1" value="Masuk" onclick="getInfo()">
+        
+
+        <div class="bottom-text">
+          Belum memiliki akun? <a href="../Login-Form/register.html">Daftar</a>
+        </div>
+
+      </form>
+      <script>
+        function getInfo()
+        {
+            var i = $('#usr').val();
+            var p = $('#pwd').val();
+            if (i == 'admin' && p =='admin')
+                window.location = "../admin/Form-Master/dashboard/form-master.html";
+            else if (i == 'drupadi_02' && p == 'drupadi_02')
+                window.location = "../admin/Form-Siswa/dashboard/form-siswa.html";
+            else if (i == 'ganjar01' && p == 'ganjar01')
+                window.location = "../admin/Form-Guru/dashboard/form-guru.html";
+            else
+                window.location = "login-form.html";
+        }
+      </script>
+
+      <script type="text/javascript">
+        $(".txtb input").on("focus",function(){
+        $(this).addClass("focus");
+      });
+
+        $(".txtb input").on("blur",function(){
+        if($(this).val() == "")
+        $(this).removeClass("focus");
+      });
+      </script>
+
+  </body>
+</html>

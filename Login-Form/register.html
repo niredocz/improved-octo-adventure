@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+      <form method="POST" class="login-form"  style="height: 600px;">
+        <span>
+          <h1>Daftar Akun Baru</h1>
+          <hr>
+        </span>
+        <!-- onclick="window.location.href=admin" -->
+        <!-- onclick="window.location.href=siswa" -->
+       
+        </div>
+
+        <div class="txtb">
+          <input type="text" name="username" id="usr">
+          <span data-placeholder="Nama Pengguna"></span>
+        </div>
+
+        <div class="txtb">
+            <input type="email" name="username" id="usr">
+            <span data-placeholder="Email"></span>
+          </div>
+
+        <div class="txtb">
+          <input type="password" name="password" id="pwd">
+          <span data-placeholder="Kata Sandi"></span>
+        </div>
+
+        <div class="txtb">
+            <input type="password" name="password" id="pwd">
+            <span data-placeholder="Konfirmasi Kata Sandi"></span>
+          </div>
+
+        <input type="button" class="logbtn" id="opt-1" value="Daftar" onclick="getInfo()">
+        
+
+        <div class="bottom-text">
+          Sudah memiliki akun? <a href="../Login-Form/login-form.html">Masuk</a>
+        </div>
+
+      </form>
+
+      <script type="text/javascript">
+        $(".txtb input").on("focus",function(){
+        $(this).addClass("focus");
+      });
+
+        $(".txtb input").on("blur",function(){
+        if($(this).val() == "")
+        $(this).removeClass("focus");
+      });
+      </script>
+
+  </body>
+</html>
