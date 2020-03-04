@@ -1,0 +1,242 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/admin.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <script src="https://kit.fontawesome.com/a9522f53e7.js" crossorigin="anonymous"></script>
+    <title>Halaman Cetak</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="https://www.jotform.com/opt/tablesorter/themes/theme.blue.css" type="text/css" media="print, projection, screen" />
+    <style>
+        th{ background:#ddd; }
+        tr:nth-child(even){ background:#f5f5f5; }
+        th, td{ text-align:center; border:1px solid #bbb; }
+        table{ border-collapse:collapse; margin:5px; width: calc(100% - 10px); font-family:Verdana, Geneva, Arial, Helvetica, sans-serif; font-size:12px; }
+        table.tablesorter thead tr th, table.tablesorter tfoot tr th { padding:5px 19px 5px 10px; }
+        #thumb{position:absolute;border:1px solid #ccc;background:#333;padding:5px;display:none;color:#fff;}
+   </style>
+    <link rel="stylesheet" type="text/css" href="https://www.jotform.com/opt/tablesorter/addons/tooltipster/tooltipster.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.jotform.com/opt/tablesorter/addons/fancybox/jquery.fancybox.css" />
+    <script type="text/javascript" src="https://www.jotform.com/js/vendor/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="https://www.jotform.com/opt/tablesorter/addons/tooltipster/tooltipster.js?v3=3.3.14715"></script>
+    <script type="text/javascript" src="https://www.jotform.com/opt/tablesorter/addons/fancybox/jquery.fancybox.pack.js?v3=3.3.14715"></script>
+    <script type="text/javascript" src="https://www.jotform.com/opt/tablesorter/jquery.tablesorter.min.js?v3=3.3.14715"></script>
+    <script type="text/javascript" src="https://www.jotform.com/opt/tablesorter/jquery.tablesorter.widgets.min.js?v3=3.3.14715"></script>
+    <script type="text/javascript" src="https://www.jotform.com/opt/tablesorter/addons/linkify/linkify_1.0.js?v3=3.3.14715"></script>
+    <script type="text/javascript" src="https://www.jotform.com/opt/tablesorter/addons/imagemod/imageinfo.js?v3=3.3.14715"></script>
+    <script type="text/javascript" src="https://www.jotform.com/opt/tablesorter/addons/imagemod/imagerotate.js?v3=3.3.14715"></script>
+    <script type="text/javascript" src="https://www.jotform.com/opt/tablesorter/mainscript.js?v3=3.3.14715"></script>
+    <script type="text/javascript" src="https://www.jotform.com/server.php?action=getListingSettings&listingID=200006983681050&callback=jf_Reports.tableInit"></script>
+</head>
+<body>
+    <header>
+        <div class="header-text">
+            <h2>Sistem Informasi Penilaian Raport Siswa</h2>
+        </div>
+        <a href="../../../Login-Form/login-form.html" class="logout"><i class="fa fa-sign-out"></i> Log Out</a>
+    </header>
+    <div class="main-wrapper" id="outer-container">    
+        <div class="main-wrapper">
+            <div class="left-sidebar">
+                <div class="logo">
+                    <img src="../logo.png" width="90%" style=" margin-top: 20px;">
+                </div>
+                <div class="menu">
+                    <li class="item">
+                        <a href="../dashboard/form-siswa.html" class="side-btn"><i class="fab fa-dropbox"></i>Dashboard</a>
+                    </li>
+                    <li class="item" id="akademik">
+                        <a href="#akademik" class="side-btn"><i class="fas fa-book"></i>Cetak</a>
+                        <div class="side-menu">
+                            <a href="../cetak/cetak-nilai.html"><i class="fa fa-print"></i>Cetak Nilai Siswa</a>
+                        </div>
+                    </li>
+                </div>
+            </div>
+
+    <div class="main-content" id="content">
+        <form action="" method="POST">
+            <section style="display: inline-flex;">
+                <img src="../../Form-Master/dashboard/logo-content.png" width="25%" id="logo" style="margin-right: 100px;">
+                <h4><p>LAPORAN HASIL BELAJAR SISWA</p><p>ULANGAN AKHIR SEMESTER</p></h4>
+            </section>
+            <table>
+                <tbody>
+                  <tr><td>
+                    <div class="info-siswa">
+                        <p><label for="kode">Kode Siswa</label>
+                        <input type="text" id="kode" placeholder="S002"></p>
+                        <p><label for="nama">Nama Lengkap</label>
+                        <input type="text" id="nama" placeholder="Drupadi"></p>
+                        <p><label for="nis">Nomor Induk Siswa</label>
+                        <input type="text" id="nis" placeholder="1360"></p>
+                        <!-- <p><label for="kode-mapel">Kode Mata Pelajaran</label>
+                        <input type="text" id="kode-mapel" placeholder="SKT004"></p>
+                        <p><label for="nama-mapel">Nama Mata Pelajaran</label>
+                        <input type="text" name="" id="nama-mapel" placeholder="Seni Kerajinan Tangan"></p>
+                        <p><label for="nilai">Nilai</label>
+                        <input type="text" name="" id="nilai" placeholder="87"></p>
+                        <p><label for="ket">Keterangan</label>
+                        <input type="text" name="" id="ket" placeholder="A"></p> -->
+                    </div>
+                  </td>
+                  <td>
+                    <p><label for="asal">Asal Sekolah</label>
+                        <input type="text" name="" id="asal" placeholder="SDN 02 Surakarta"></p>
+                        <p><label for="kelas">Kelas Siswa</label>
+                        <input type="text" id="kelas" placeholder="11 C"></p>
+                        <p><label for="tahun">Tahun Ajaran</label>
+                        <input type="text" name="" id="tahun" placeholder="2018/2019"></p>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+              <br>
+              <table style="font-size: 15px; height: 400px;">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Mata Pelajaran</th>
+                        <th>KKM</th>
+                        <th>Angka</th>
+                        <th>Huruf</th>
+                        <th>Ket.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>A.</b></td>
+                        <td style="text-align: left;"><b>Mata Pelajaran</b></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td style="text-align: left;">Biologi</td>
+                        <td>75</td>
+                        <td>87</td>
+                        <td>A</td>
+                        <td>Tuntas</td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td style="text-align: left;">Matematika</td>
+                        <td>75</td>
+                        <td>79</td>
+                        <td>B</td>
+                        <td>Tuntas</td>
+                    </tr>
+                    <tr>
+                        <td>03</td>
+                        <td style="text-align: left;">Penjaskes</td>
+                        <td>70</td>
+                        <td>80</td>
+                        <td>B</td>
+                        <td>Tuntas</td>
+                    </tr>
+                    <tr>
+                        <td>04</td>
+                        <td style="text-align: left;">Seni Kerajinan Tangan</td>
+                        <td>75</td>
+                        <td>70</td>
+                        <td>C</td>
+                        <td>Tidak Tuntas</td>
+                    </tr>
+                    <tr>
+                        <td>05</td>
+                        <td style="text-align: left;">Bahasa Indonesia</td>
+                        <td>75</td>
+                        <td>74</td>
+                        <td>C</td>
+                        <td>Tidak Tuntas</td>
+                    </tr>
+                    <tr>
+                        <td>06</td>
+                        <td style="text-align: left;">Teknologi Informasi Komunikasi</td>
+                        <td>70</td>
+                        <td>85</td>
+                        <td>B</td>
+                        <td>Tuntas</td>
+                    </tr>
+                    <tr>
+                        <td><b>B.</b></td>
+                        <td style="text-align: left;"><b>Muatan Lokal</b></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td style="text-align: left;">1. Bahasa Daerah</td>
+                        <td>75</td>
+                        <td>75</td>
+                        <td>B</td>
+                        <td>Tuntas</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td style="text-align: left;">2. Bahasa Inggris</td>
+                        <td>75</td>
+                        <td>90</td>
+                        <td>A</td>
+                        <td>Tuntas</td>
+                    </tr>
+                </tbody>
+              </table>
+              <table style="width: 350px; height: 70px;">
+                  <tr>
+                      <td><b>Jumlah</b></td>
+                      <td><b></b>640</td>
+                  </tr>
+                  <tr>
+                      <td><b>Rata - Rata</b></td>
+                      <td><b></b>80</td>
+                  </tr>
+              </table>
+            
+            
+            
+        </form>
+        <a id="basic" href="#nada" class="button button-primary" onclick="printpage()">Print container</a>    
+    </div>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../../../printThis-master/printThis.js"></script>
+    <script>
+        $('#basic').on("click", function() {
+            $('#content, #logo').printThis({
+            debug: false,               // show the iframe for debugging
+            importCSS: true,            // import parent page css
+            importStyle: false,         // import style tags
+            printContainer: true,       // print outer container/$.selector
+            loadCSS: "file:///C:/Users/daffa/Documents/Project%20IMK/admin/Form-Siswa/cetak/style.css",                // path to additional css file - use an array [] for multiple
+            pageTitle: null,              // add title to print page
+            removeInline: false,        // remove inline styles from print elements
+            removeInlineSelector: "*",  // custom selectors to filter inline styles. removeInline must be true
+            printDelay: 333,            // variable print delay
+            header: null,               // prefix to html
+            footer: null,               // postfix to html
+            base: "https://jasonday.github.io/printThis/",                // preserve the BASE tag or accept a string for the URL
+            formValues: true,           // preserve input/form values
+            canvas: false,              // copy canvas content
+            doctypeString: '<!DOCTYPE HTML>',       // enter a different doctype for older markup
+            removeScripts: false,       // remove script tags from print content
+            copyTagClasses: false,      // copy classes from the html & body tag
+            beforePrintEvent: null,     // function for printEvent in iframe
+            beforePrint: null,          // function called before iframe is filled
+            afterPrint: null            // function called before iframe is removed
+            });   
+        });
+    </script>
+</body>
+</html>
