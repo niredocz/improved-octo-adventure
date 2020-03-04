@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/admin.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <script src="https://kit.fontawesome.com/a9522f53e7.js" crossorigin="anonymous"></script>
+    <title>Halaman Cetak</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="https://www.jotform.com/opt/tablesorter/themes/theme.blue.css" type="text/css" media="print, projection, screen" />
+    <style>
+        th{ background:#ddd; }
+        tr:nth-child(even){ background:#f5f5f5; }
+        th, td{ text-align:center; border:1px solid #bbb; }
+        table{ border-collapse:collapse; margin:5px; width: calc(100% - 10px); font-family:Verdana, Geneva, Arial, Helvetica, sans-serif; font-size:12px; }
+        table.tablesorter thead tr th, table.tablesorter tfoot tr th { padding:5px 19px 5px 10px; }
+        #thumb{position:absolute;border:1px solid #ccc;background:#333;padding:5px;display:none;color:#fff;}
+   </style>
+    <link rel="stylesheet" type="text/css" href="https://www.jotform.com/opt/tablesorter/addons/tooltipster/tooltipster.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.jotform.com/opt/tablesorter/addons/fancybox/jquery.fancybox.css" />
+    <script type="text/javascript" src="https://www.jotform.com/js/vendor/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="https://www.jotform.com/opt/tablesorter/addons/tooltipster/tooltipster.js?v3=3.3.14715"></script>
+    <script type="text/javascript" src="https://www.jotform.com/opt/tablesorter/addons/fancybox/jquery.fancybox.pack.js?v3=3.3.14715"></script>
+    <script type="text/javascript" src="https://www.jotform.com/opt/tablesorter/jquery.tablesorter.min.js?v3=3.3.14715"></script>
+    <script type="text/javascript" src="https://www.jotform.com/opt/tablesorter/jquery.tablesorter.widgets.min.js?v3=3.3.14715"></script>
+    <script type="text/javascript" src="https://www.jotform.com/opt/tablesorter/addons/linkify/linkify_1.0.js?v3=3.3.14715"></script>
+    <script type="text/javascript" src="https://www.jotform.com/opt/tablesorter/addons/imagemod/imageinfo.js?v3=3.3.14715"></script>
+    <script type="text/javascript" src="https://www.jotform.com/opt/tablesorter/addons/imagemod/imagerotate.js?v3=3.3.14715"></script>
+    <script type="text/javascript" src="https://www.jotform.com/opt/tablesorter/mainscript.js?v3=3.3.14715"></script>
+    <script type="text/javascript" src="https://www.jotform.com/server.php?action=getListingSettings&listingID=200006983681050&callback=jf_Reports.tableInit"></script>
+</head>
+<body>
+    <header>
+        <div class="header-text">
+            <h2>Sistem Informasi Penilaian Raport Siswa</h2>
+        </div>
+        <a href="../../../Login-Form/login-form.html" class="logout"><i class="fa fa-sign-out"></i> Log Out</a>
+    </header>
+    <div class="main-wrapper" id="outer-container">    
+        <div class="main-wrapper">
+            <div class="left-sidebar">
+                <div class="logo">
+                    <img src="../logo.png" width="90%" style=" margin-top: 20px;">
+                </div>
+                <div class="menu">
+                    <li class="item">
+                        <a href="../dashboard/form-master.html" class="side-btn"><i class="fab fa-dropbox"></i>Dashboard</a>
+                    </li>
+                    <li class="item" id="guru">
+                        <a href="#guru" class="side-btn"><i class="fas fa-user"></i>Guru</a>
+                        <div class="side-menu">
+                            <a href="../../Form-Master/guru/form-guru.html">Input Data Guru</a>
+                        </div>
+                    </li>
+                    <li class="item" id="siswa">
+                        <a href="#siswa" class="side-btn"><i class="fas fa-users"></i>Siswa</a>
+                        <div class="side-menu"> 
+                            <a href="../siswa/form-siswa.html">Input Data Siswa</a>
+                        </div>
+                    </li>
+                    <li class="item" id="akademik">
+                        <a href="#akademik" class="side-btn"><i class="fas fa-book"></i>Akademik</a>
+                        <div class="side-menu">
+                            <a href="../akademik/mapel.html"><i class="fas fa-graduation-cap"></i>Mata Pelajaran</a>
+                            <a href="../akademik/kelas.html"><i class="fas fa-home"></i>Kelas</a>
+                            <a href="../akademik/kelas-siswa.html"><i class="fas fa-id-card"></i>Siswa</a>
+                        </div>
+                    </li>
+                    <li class="item" id="cetak">
+                        <a href="#cetak" class="side-btn"><i class="fa fa-print"></i>Cetak</a>
+                        <div class="side-menu">
+                            <a href="../cetak/cetak-guru.html">Cetak Data Guru</a>
+                            <a href="../cetak/cetak-siswa.html">Cetak Data Siswa</a>
+                            <a href="../cetak/cetak-mapel.html">Cetak Mata Pelajaran</a>
+                            <a href="../cetak/cetak-kelas.html">Cetak Data Kelas</a>
+                            <a href="../cetak/cetak-nilai.html">Cetak Data Nilai</a>
+                        </div>
+                    </li>
+                </div>
+            </div>
+
+    <div class="main-content" id="content">
+        <form action="" method="POST">
+            <h3>Form Cetak Guru</h3>
+            <div class="tabel">
+                <table id="data-table" class="tablesorter tablesorter-blue" border="1" cellpadding="8" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th nowrap width="20px">No.</th>
+                            <th nowrap>Kode Guru</th>
+                            <th nowrap>Nama Guru</th>
+                            <th nowrap>Username</th>
+                            <th nowrap>Alamat</th>
+                            <th nowrap>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>G001</td>
+                            <td>Pak Ganjar</td>
+                            <td>ganjar01</td>
+                            <td>Laweyan</td>
+                            <td>ganjar@sdn02.com</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>G002</td>
+                            <td>Pak Heru</td>
+                            <td>heru02</td>
+                            <td>Gentan</td>
+                            <td>heru@sdn02.com</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>G003</td>
+                            <td>Pak Gatot</td>
+                            <td>gatot03</td>
+                            <td>Ngemplak</td>
+                            <td>gatot@sdn02.com</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>G004</td>
+                            <td>Pak Agus</td>
+                            <td>Agus04</td>
+                            <td>Banyuanyar</td>
+                            <td>agus@sdn02.com</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>G005</td>
+                            <td>Bu Hesti</td>
+                            <td>hesti05</td>
+                            <td>Mojosongo</td>
+                            <td>hesti@sdn02.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <a id="basic" href="#nada" class="button button-primary" onclick="printpage()">Print container</a>
+            <br>
+        </form>
+        
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../../../printThis-master/printThis.js"></script>
+    <script>
+        $('#basic').on("click", function() {
+            $('.tabel').printThis({
+            debug: false,               // show the iframe for debugging
+            importCSS: true,            // import parent page css
+            importStyle: false,         // import style tags
+            printContainer: true,       // print outer container/$.selector
+            loadCSS: "",                // path to additional css file - use an array [] for multiple
+            pageTitle: "Sekolah Dasar Negeri 02 Surakarta",              // add title to print page
+            removeInline: false,        // remove inline styles from print elements
+            removeInlineSelector: "*",  // custom selectors to filter inline styles. removeInline must be true
+            printDelay: 333,            // variable print delay
+            header: "<h1>Data Guru Edisi Terbaru</h1>",               // prefix to html
+            footer: null,               // postfix to html
+            base: "https://jasonday.github.io/printThis/",                // preserve the BASE tag or accept a string for the URL
+            formValues: true,           // preserve input/form values
+            canvas: false,              // copy canvas content
+            doctypeString: '...',       // enter a different doctype for older markup
+            removeScripts: false,       // remove script tags from print content
+            copyTagClasses: false,      // copy classes from the html & body tag
+            beforePrintEvent: null,     // function for printEvent in iframe
+            beforePrint: null,          // function called before iframe is filled
+            afterPrint: null            // function called before iframe is removed
+            });   
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+        <meta name="HandheldFriendly" content="true">
+        <link rel="stylesheet" href="../../../css/style.css">
+        <link rel="stylesheet" href="../../../css/admin.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+        <script src="https://kit.fontawesome.com/a9522f53e7.js" crossorigin="anonymous"></script>
+        <title>Halaman Mata Pelajaran</title>
+    </head>
+<body>
+    <header>
+        <div class="header-text">
+            <h2>Sistem Informasi Penilaian Raport Siswa</h2>
+        </div>
+        <a href="../../../Login-Form/login-form.html" class="logout"><i class="fa fa-sign-out"></i> Log Out</a>
+    </header>
+
+    <div class="main-wrapper">
+        <div class="left-sidebar">
+            <div class="logo">
+                <img src="../logo.png" width="90%" style=" margin-top: 20px;">
+            </div>
+            <div class="menu">
+                <li class="item">
+                    <a href="../dashboard/form-master.html" class="side-btn"><i class="fab fa-dropbox"></i>Dashboard</a>
+                </li>
+                <li class="item" id="guru">
+                    <a href="#guru" class="side-btn"><i class="fas fa-user"></i>Guru</a>
+                    <div class="side-menu">
+                        <a href="../guru/form-guru.html">Input Data Guru</a>
+                    </div>
+                </li>
+                <li class="item" id="siswa">
+                    <a href="#siswa" class="side-btn"><i class="fas fa-users"></i>Siswa</a>
+                    <div class="side-menu"> 
+                        <a href="../siswa/form-siswa.html">Input Data Siswa</a>
+                    </div>
+                </li>
+                <li class="item" id="akademik">
+                    <a href="#akademik" class="side-btn"><i class="fas fa-book"></i>Akademik</a>
+                    <div class="side-menu">
+                        <a href=""><i class="fas fa-graduation-cap"></i>Mata Pelajaran</a>
+                        <a href="../akademik/kelas.html"><i class="fas fa-home"></i>Kelas</a>
+                        <a href="../akademik/kelas-siswa.html"><i class="fas fa-id-card"></i>Siswa</a>
+                    </div>
+                </li>
+                <li class="item" id="cetak">
+                    <a href="#cetak" class="side-btn"><i class="fa fa-print"></i>Cetak</a>
+                    <div class="side-menu">
+                        <a href="../cetak/cetak-guru.html">Cetak Data Guru</a>
+                        <a href="../cetak/cetak-siswa.html">Cetak Data Siswa</a>
+                        <a href="../cetak/cetak-mapel.html">Cetak Mata Pelajaran</a>
+                        <a href="../cetak/cetak-kelas.html">Cetak Data Kelas</a>
+                        <a href="../cetak/cetak-nilai.html">Cetak Data Nilai</a>
+                    </div>
+                </li>
+            </div>
+        </div>
+        <div class="main-content">
+              <!-- Tabel Mata Pelajaran -->
+            <form  method="POST">
+                <h2>Input Data Mata Pelajaran</h2>
+                <div class="txtb">
+                    <input type="text">
+                    <span data-placeholder="Kode Mata Pelajaran"></span>
+                </div>
+                <div class="txtb">
+                    <input type="text">
+                    <span data-placeholder="Nama Mata Pelajaran"></span>
+                </div>
+                <div class="select">
+                    <h4>Keterangan</h4>
+                    <span>
+                      <select name="slt-1" id="slt-1" required="required">
+                        <option>Pilih Salah Satu</option>
+                        <option value="1">Kelas Wajib</option>
+                        <option value="2">Kelas Tambahan</option>
+                      </select>
+                    </span>
+                  </div>
+                  <div class="submit-btn">
+                    <button onclick="location.reload()" style="background-color: rgb(189, 34, 34);"><i class="fa fa-refresh" style="color: ivory; margin-right: 10px;"></i>Reset</button>
+                    <button onclick="location.reload()"><i class="fa fa-send" style="color: ivory; margin-right: 10px;"></i>Kirim</button>
+                </div>
+            </form>  
+        </div>
+    </div>
+
+        <!-- JQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- JS Custom Script -->
+        <script src="../../../js/scripts.js"></script>
+</body>
+</html>

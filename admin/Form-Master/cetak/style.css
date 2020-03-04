@@ -1,0 +1,18 @@
+.button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    display: inline;
+    border: none;
+    outline: none;
+    color: rgb(252, 252, 252);
+    background: rgb(67, 93, 209);
+    transition: .25s;
+    cursor: pointer;
+    float: right; 
+    padding: 10px;
+}
+
+
+.button:hover {
+    background: #06969b;
+}
