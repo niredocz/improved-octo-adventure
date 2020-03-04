@@ -1,0 +1,254 @@
+.main-wrapper h2 {
+    border: none;
+    font-size: 20px;
+}
+
+.main-wrapper .left-sidebar {
+    position: relative;
+    width: 15%;
+    background: #316a99;
+}
+
+.main-wrapper .left-sidebar .logo {
+    margin-bottom: 10px;
+    margin-left: 15px;
+    overflow-x: hidden;
+}
+
+.item {
+    border-top: 1px solid #316a99;
+    overflow: hidden;
+}
+
+.item:target .side-menu{
+    max-height: 15em;
+}
+
+.item:hover {
+    background: #469ee6;
+    transition: .3s;
+}
+
+.side-btn {
+    display: block;
+    padding: 8px 20px;
+    background: #316a99;
+    color: white;
+    position: relative;
+}
+
+.side-btn:before {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background: #316a99;
+    left: 15px;
+    bottom: -4.5px;
+    transform: rotate(45deg);
+
+}
+
+.side-btn i {
+    margin-right: 10px;
+}
+
+.side-menu {
+    background: #333;
+    overflow: hidden;
+    transition: max-height .4s;
+    max-height: 0;
+}
+
+.side-menu i {
+    margin-right: 10px;
+}
+
+.side-menu a {
+    display: block;
+    padding: 12px 26px;
+    color: white;
+    font-size: 14px;
+    margin: 3px 0;
+    position: relative;
+}
+
+.side-menu a:before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #469ee6;
+    left: 0;
+    top: 0;
+    transition: .3s;
+    opacity: 0;
+}
+
+.side-menu a:hover:before {
+    opacity: 1;
+}
+
+.main-wrapper .main-content {
+    height: 100%;
+    width: 85%;
+    background: #bfcbce;
+    padding: 40px 100px 100px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.main-wrapper .main-content .txtb{
+    border-bottom: 2px solid #adadad;
+    position: relative;
+    margin: 30px 0;
+}
+
+.main-wrapper .main-content .txtb input{
+    font-size: 15px;
+    color: #333;
+    border: none;
+    width: 100%;
+    outline: none;
+    background: none;
+    padding: 0 5px;
+    height: 40px;
+}
+
+.main-wrapper .main-content .txtb textarea{
+    font-size: 15px;
+    color: #333;
+    border: none;
+    width: 100%;
+    outline: none;
+    background: none;
+    padding: 10px 5px;
+    height: 40px;
+}
+
+.txtb span::before{
+    content: attr(data-placeholder);
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #687172;
+    transform: translateY(-50%);
+    z-index: 1;
+    transition: .5s;
+}
+
+.focus + span::before{
+    top: -5px;
+}
+
+.focus + span::after{
+    width: 50%;
+}
+
+.upload-pict {
+    margin-left: 5px;
+}
+
+#custom-btn {
+    height: 30px;
+    width: 100px;
+    color: ivory;
+    background-color: #2980b9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .25s;
+    margin-top: 5px;
+}
+
+#custom-btn:hover {
+    background: #18351a;
+}
+
+#custom-text {
+    margin-left: 10px;
+    color: #687172;
+    font-size: 14px;
+}
+
+input[type="checkbox"] + label {
+    display: block;
+    margin: 0.2em;
+  }
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  input[type="checkbox"] + label:before {
+    content: "\2714";
+    border: 0.1em solid #000;
+    border-radius: 0.2em;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    padding-left: 0.3em;
+    padding-bottom: 0.3em;
+    margin-right: 0.5em;
+    vertical-align: bottom;
+    color: transparent;
+    transition: 0.2s;
+  }
+  input[type="checkbox"] + label:active:before{
+    transform: scale(0);
+  }
+  input[type="checkbox"]:checked + label:before {
+    background-color: MediumSeaGreen;
+    color: #fff;
+  }
+
+
+.nilai {
+    position: relative;
+}
+
+.input-area {
+    border: 1px solid #f1f1f1;
+    padding: 10px 5px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.input-area:focus {
+    border: 2px solid #f1f1f1;
+}
+
+.nilai .label {
+    color: #8f8d8d;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.main-wrapper .main-content .submit-btn {
+    transform: translateX(90%);
+    margin-right: 120px;
+    margin-top: 100px;
+}
+.fa-refresh {
+    color: black;
+}
+.main-wrapper .main-content .submit-btn button {
+    display: inline;
+    width:  100px;
+    height: 40px;
+    border: none;
+    outline: none;
+    color: rgb(252, 252, 252);
+    background: rgb(41, 114, 41);
+    transition: .25s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.main-wrapper .main-content .submit-btn button:hover {
+    background: #18351a;
+}
+
+.optional {
+    display: inline;
+}
